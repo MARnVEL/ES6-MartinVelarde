@@ -170,7 +170,6 @@ promesaTres2(true)
 
 //*4-SOLUCIÓN
 
-// "Ejercicios de archivos README.md y 01-funciones-promesas.md terminados y revisados 31-08-2022 01:20hs"
 
 function promesaCuatro(arguments) {
      return   new Promise((resolve, reject) => {
