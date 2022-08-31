@@ -23,15 +23,12 @@ const obtenerPcias = async () => {
         const consulta = await fetch("https://apis.datos.gob.ar/georef/api/provincias");
         const consultaToJson = await consulta.json();
         console.log(consultaToJson);
-        
     } catch (error) {
-        console.log(error)
+        console.log(error);
         // return alert('Error al consultar los datos')
     }
 }
-
 obtenerPcias()
-
 // console.log(obtenerPcias())
 // obtenerPcias()
 //     .then((consulta) => consulta.json())
@@ -43,6 +40,7 @@ obtenerPcias()
     // .catch(err => console.log(err))
 
 /* 
+//! Otro ejemplo sacado de clases del profe Ale
 // Implementación de una función asíncrona para pedir datos.
  const pedirDatos = async () => {
         try {
@@ -55,21 +53,34 @@ obtenerPcias()
         }
 } */
 
-
-
-
-
-
-
-
 //*2-CONSIGNA
-
 // // Función que retorna los datos de departamentos
 // function obtenerDptos() {
 //     await retrasar(1391);
 
 //     const consulta = fetch('');
 // }
+
+//*2-SOLUCIÓN
+
+const obtenerDptos = async () => {
+
+    try {
+        await retrasar(1391);
+        const consulta = await fetch("https://apis.datos.gob.ar/georef/api/departamentos");
+        const consultaToJson = await consulta.json();
+        console.log(consultaToJson);
+    } catch (error) {
+        console.log(error);
+        // return alert('Error al consultar los datos')
+    }
+//     const consulta = fetch('');
+}
+
+obtenerDptos()
+
+
+
 
 
 
