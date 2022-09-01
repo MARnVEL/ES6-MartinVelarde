@@ -12,7 +12,7 @@
 
 //*1-SOLUCIÓN
 
-
+/* 
 
 const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
 
@@ -27,7 +27,7 @@ const obtenerPcias = async () => {
         console.log(error);
         // return alert('Error al consultar los datos')
     }
-}
+} */
 // obtenerPcias()
 // console.log(obtenerPcias())
 // obtenerPcias()
@@ -62,7 +62,7 @@ const obtenerPcias = async () => {
 // }
 
 //*2-SOLUCIÓN
-
+/* 
 const obtenerDptos = async () => {
 
     try {
@@ -75,7 +75,7 @@ const obtenerDptos = async () => {
         // return alert('Error al consultar los datos')
     }
 //     const consulta = fetch('');
-}
+} */
 
 // obtenerDptos()
 
@@ -89,7 +89,7 @@ const obtenerDptos = async () => {
 
 //*3-SOLUCIÓN
 
-const obtenerLocalidades = async () => {
+/* const obtenerLocalidades = async () => {
 
     try {
         await retrasar(900);
@@ -101,7 +101,7 @@ const obtenerLocalidades = async () => {
         // return alert('Error al consultar los datos')
     }
 //     const consulta = fetch('');
-}
+} */
 
 // obtenerLocalidades();
 
@@ -121,6 +121,9 @@ const obtenerLocalidades = async () => {
 // consultarDatos();
 
 //*4-SOLUCIONES
+
+const {obtenerPcias, obtenerDptos, obtenerLocalidades} = require('./libs/funciones-exportadas.js')
+
 
 const consultarDatos = async () => {
     const provincias = await obtenerPcias();
