@@ -19,16 +19,16 @@ const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, mili
 // Función que retorna los datos de provincias
 const obtenerPcias = async () => {
     try {
-        await retrasar(3000);
+        await retrasar(1800);
         const consulta = await fetch("https://apis.datos.gob.ar/georef/api/provincias");
-        const consultaToJson = await consulta.json();
-        console.log(consultaToJson);
+        const consultaToJson = await consulta.json().then(resp => resp.provincias);
+        return consultaToJson;
     } catch (error) {
         console.log(error);
         // return alert('Error al consultar los datos')
     }
 }
-obtenerPcias()
+// obtenerPcias()
 // console.log(obtenerPcias())
 // obtenerPcias()
 //     .then((consulta) => consulta.json())
@@ -67,9 +67,9 @@ const obtenerDptos = async () => {
 
     try {
         await retrasar(1391);
-        const consulta = await fetch("https://apis.datos.gob.ar/georef/api/departamentos");
-        const consultaToJson = await consulta.json();
-        console.log(consultaToJson);
+        const consulta = await fetch("https://apis.datos.gob.ar/georef/api/departamentos?max=529");
+        const consultaToJson = await consulta.json().then(resp => resp.departamentos);
+        return consultaToJson;
     } catch (error) {
         console.log(error);
         // return alert('Error al consultar los datos')
@@ -77,7 +77,67 @@ const obtenerDptos = async () => {
 //     const consulta = fetch('');
 }
 
-obtenerDptos()
+// obtenerDptos()
+
+//*3-CONSIGNA
+// // Función que retorna los datos de localidades
+// function obtenerLocalidades() {
+//     await retrasar(900);
+
+//     const consulta = fetch('');
+// }
+
+//*3-SOLUCIÓN
+
+const obtenerLocalidades = async () => {
+
+    try {
+        await retrasar(900);
+        const consulta = await fetch("https://apis.datos.gob.ar/georef/api/localidades?max=4142");
+        const consultaToJson = await consulta.json().then(resp=>resp.localidades);
+        return consultaToJson;
+    } catch (error) {
+        console.log(error);
+        // return alert('Error al consultar los datos')
+    }
+//     const consulta = fetch('');
+}
+
+// obtenerLocalidades();
+
+//*4-CONSIGNAS:
+
+// // Funcion para obtener todos los datos
+// function consultarDatos() {
+//     const provincias = obtenerPcias();
+//     const dptos = obtenerDptos();
+//     const localidades = obtenerLocalidades();
+
+//     console.log(provincias);
+//     console.log(dptos);
+//     console.log(localidades);
+// }
+
+// consultarDatos();
+
+//*4-SOLUCIONES
+
+const consultarDatos = async () => {
+    const provincias = await obtenerPcias();
+    const dtos = await obtenerDptos();
+    const localidades = await obtenerLocalidades();
+
+    console.log(provincias);
+    console.log(dtos);
+    console.log(localidades);
+}
+
+
+consultarDatos();
+
+
+
+
 
 
 
