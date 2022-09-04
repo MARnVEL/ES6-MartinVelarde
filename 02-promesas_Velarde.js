@@ -122,9 +122,9 @@ const obtenerDptos = async () => {
 
 //*4-SOLUCIONES
 
-const {obtenerPcias, obtenerDptos, obtenerLocalidades} = require('./libs/funciones-exportadas.js')
 
 
+/* 
 const consultarDatos = async () => {
     const provincias = await obtenerPcias();
     const dtos = await obtenerDptos();
@@ -136,10 +136,44 @@ const consultarDatos = async () => {
 }
 
 
+consultarDatos(); */
+
+
+//*7-CONSIGNA:
+//7. Utilizar la palabra reservada **export** para exportar las funciones y
+// que puedan ser utilizadas desde el archivo __app.js__. 
+//Pueden exportarlas una por una o como un solo objeto.
+
+//*7-SOLUCIÓN
+
+const misFunciones = require("./libs/funciones-exportadas.js");
+
+const consultarDatos = async () => {
+    const provincias = await misFunciones.obtenerPcias();
+    const dtos = await misFunciones.obtenerDptos();
+    const localidades = await misFunciones.obtenerLocalidades();
+
+    console.log(provincias);
+    console.log(dtos);
+    console.log(localidades);
+}
 consultarDatos();
 
 
+//*otra forma:
+/* import { obtenerPcias, obtenerDptos, obtenerLocalidades } from './libs/funciones-exportadas.js';
 
+const consultarDatos = async () => {
+    const provincias = await obtenerPcias();
+    const dtos = await obtenerDptos();
+    const localidades = await obtenerLocalidades();
+
+    console.log(provincias);
+    console.log(dtos);
+    console.log(localidades);
+}
+consultarDatos();
+*/
 
 
 

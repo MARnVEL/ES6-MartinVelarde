@@ -1,9 +1,9 @@
 
 
-const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
+export const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
 
 // Función que retorna los datos de provincias
-const obtenerPcias = async () => {
+export const obtenerPcias = async () => {
     try {
         await retrasar(1800);
         const consulta = await fetch("https://apis.datos.gob.ar/georef/api/provincias");
@@ -17,7 +17,7 @@ const obtenerPcias = async () => {
 
 
 
-const obtenerDptos = async () => {
+export const obtenerDptos = async () => {
 
     try {
         await retrasar(1391);
@@ -32,7 +32,7 @@ const obtenerDptos = async () => {
 }
 
 
-const obtenerLocalidades = async () => {
+export const obtenerLocalidades = async () => {
 
     try {
         await retrasar(900);
@@ -46,7 +46,13 @@ const obtenerLocalidades = async () => {
 //     const consulta = fetch('');
 }
 
-module.exports = {obtenerPcias,obtenerDptos,obtenerLocalidades}
+
+module.exports = {
+    retrasar,
+    obtenerPcias,
+    obtenerDptos,
+    obtenerLocalidades
+}
 
 
 
