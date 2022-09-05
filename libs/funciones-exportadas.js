@@ -1,5 +1,5 @@
 
-
+const fetch = require('node-fetch');
 const retrasar = milisegundos => new Promise(resolve => setTimeout(resolve, milisegundos));
 
 // Función que retorna los datos de provincias
