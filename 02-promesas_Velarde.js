@@ -157,11 +157,11 @@ const consultarDatos = async () => {
     console.log(dtos);
     console.log(localidades);
 }
-consultarDatos();
+consultarDatos(); 
 
 
 //*otra forma:
-/* import { obtenerPcias, obtenerDptos, obtenerLocalidades } from './libs/funciones-exportadas.js';
+/* import { obtenerPcias, obtenerDptos, obtenerLocalidades } from "./libs/funciones-exportadas.js";
 
 const consultarDatos = async () => {
     const provincias = await obtenerPcias();
@@ -172,8 +172,8 @@ const consultarDatos = async () => {
     console.log(dtos);
     console.log(localidades);
 }
-consultarDatos();
-*/
+consultarDatos(); */
+
 
 
 
