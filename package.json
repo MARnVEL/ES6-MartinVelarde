@@ -1,4 +1,21 @@
 {
+  "name": "es6-martinvelarde",
+  "version": "0.0.1",
+  "description": "this is a node, import/export  practice proyect",
+  "main": "02-promesas_Velarde.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MARnVEL/ES6-MartinVelarde.git"
+  },
+  "author": "Martín Velarde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MARnVEL/ES6-MartinVelarde/issues"
+  },
+  "homepage": "https://github.com/MARnVEL/ES6-MartinVelarde#readme",
   "dependencies": {
     "node-fetch": "^3.2.10"
   }
