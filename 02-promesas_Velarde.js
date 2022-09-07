@@ -157,7 +157,8 @@ const consultarDatos = async () => {
     console.log(dtos);
     console.log(localidades);
 }
-consultarDatos(); 
+consultarDatos()
+.then(() =>{}); 
 
 
 //*otra forma:
