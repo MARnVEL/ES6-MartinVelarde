@@ -129,7 +129,7 @@ function promesaTres(valorBooleano){
 promesaTres(true)
     .then(respuesta => console.log(respuesta))
     .catch(err => console.log(err))
-
+/* 
 //*Con función flecha:
 
 const promesaTres1 = valorBooleano => {
@@ -150,7 +150,7 @@ const promesaTres2 = async valorBool => (true === valorBool) ? ('Los valores son
 promesaTres2(true)
     .then(respuesta => console.log(respuesta))
     .catch(err => console.log(err));
-
+ */
 //##############################################################################################################
 
 //*4-CONSIGNA
@@ -169,7 +169,7 @@ promesaTres2(true)
 
 
 //*4-SOLUCIÓN
-
+/* 
 
 function promesaCuatro(arguments) {
      return   new Promise((resolve, reject) => {
@@ -216,7 +216,7 @@ promesaCuatro3(true)
 .catch(error => console.log(error))
 
 
-
+ */
 
 
 
